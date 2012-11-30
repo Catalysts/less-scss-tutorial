@@ -1,0 +1,55 @@
+/*------------------------------------------ */
+/* MIXINS ----------------------------------- */
+/*------------------------------------------ */
+
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list-horizontal {
+  .list-unstyled;
+  .clearfix;
+  li {
+    float:left;
+  }
+}
+
+.clearfix {
+  *zoom:1;  
+  &:after { clear:both; }
+  &:before,
+  &:after { content:" "; display: table;}
+}
+
+.team-status(@color) {
+	background: @color;
+	border-color: @color;
+	.details {
+		border-color: @color;
+	}
+}
+
+.columns(@cols, @margin: 1%) {
+	width: (100% - ((@cols - 1) * @margin))/@cols;
+	margin-right: @margin;
+	float:left;
+      
+	@selector: ~"@{cols}n+@{cols}";
+
+	&:nth-child(@selector) {
+		margin-right: 0;
+	}
+}
+
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('@{fontPath}League_Gothic-webfont.eot');
+    src: url('@{fontPath}League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{fontPath}League_Gothic-webfont.woff') format('woff'),
+         url('@{fontPath}League_Gothic-webfont.ttf') format('truetype'),
+         url('@{fontPath}League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

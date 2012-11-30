@@ -1,0 +1,57 @@
+/*------------------------------------------ */
+/* MEDIA QUERIES ----------------------------------- */
+/*------------------------------------------ */
+
+
+@media screen and (min-width:841px) {
+  .persons li {
+    .columns(4);
+  }
+}
+
+@media screen and (max-width:840px) and (min-width:641px) {
+	.persons li {
+		.columns(3);
+	}
+	h1 {
+		font-size: 40px;
+		span {
+			font-size: 24px;
+		}
+	}
+}
+.mediaScreen840(@personBaseColor, @team1Color, @team2Color, @team3Color) {
+  @media screen and (max-width:840px) {
+      .person .details {
+          background: @personBaseColor;
+          display: block;
+          margin: 0;
+          position: relative;
+          box-shadow: none;
+          border: none;
+          .team-1 & {
+            .team-status(@team1Color);
+          }
+
+          .team-2 & {
+            .team-status(@team2Color);
+          }
+
+          .team-3 & {
+            .team-status(@team3Color);
+          }
+      }
+  }
+}
+@media screen and (max-width:640px) {
+  .persons li {
+    .columns(2);
+  }
+    h1 {
+	text-align: center;
+		font-size: 80px;
+		span {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,57 @@
+/*------------------------------------------ */
+/* MEDIA QUERIES ----------------------------------- */
+/*------------------------------------------ */
+
+
+@media screen and (min-width:841px) {
+  .persons li {
+    .columns(4);
+  }
+}
+
+@media screen and (max-width:840px) and (min-width:641px) {
+	.persons li {
+		.columns(3);
+	}
+	h1 {
+		font-size: 40px;
+		span {
+			font-size: 24px;
+		}
+	}
+}
+
+@media screen and (max-width:840px) {
+	.details {
+           background: @red;
+           display: block;
+           margin: 0;
+           position: relative;
+           box-shadow: none;
+           border: none;
+           .team-1 & {
+             .team-status(@blue);
+           }
+
+           .team-2 & {
+             .team-status(@gray);
+           }
+
+           .team-3 & {
+             .team-status(@green);
+           }
+	}
+}
+
+@media screen and (max-width:640px) {
+  .persons li {
+    .columns(2);
+  }
+    h1 {
+	text-align: center;
+		font-size: 80px;
+		span {
+			display: none;
+		}
+	}
+}

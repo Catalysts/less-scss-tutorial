@@ -1,0 +1,16 @@
+@import "variables.scss";
+@import "base.scss";
+@import "mixins.scss";
+@import "modules.scss";
+@import "media-queries.scss";
+
+@include base($bodyBg, $red, $darkRed);
+@include menu($red, $lightRed);
+
+$teamBaseColor: $yellow;
+$team1Color: $blue;
+$team2Color: $gray;
+$team3Color: $green;
+
+@include mediaScreen840($teamBaseColor, $team1Color, $team2Color, $team3Color);
+@include content($gray, $lightRed, $black, $teamBaseColor, $team1Color, $team2Color, $team3Color);

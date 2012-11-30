@@ -1,0 +1,17 @@
+@import "variables.less";
+@import "base.less";
+@import "mixins.less";
+@import "modules.less";
+@import "media-queries.less";
+
+.base(@bodyBg, @red, @darkRed);
+
+.menu(@blue, @lightRed);
+
+@teamBaseColor: @red;
+@team1Color: @blue;
+@team2Color: @gray;
+@team3Color: @green;
+
+.mediaScreen840(@teamBaseColor, @team1Color, @team2Color, @team3Color);
+.content(@gray, @lightRed, @black, @teamBaseColor, @team1Color, @team2Color, @team3Color);
